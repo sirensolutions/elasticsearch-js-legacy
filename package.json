@@ -53,7 +53,7 @@
     "acorn": "^6.2.0",
     "aliasify": "^2.1.0",
     "async": "~0.8.0",
-    "aws-sdk": "2.489.0",
+    "aws-sdk": "2.814.0",
     "babel-eslint": "^8.2.2",
     "babel-loader": "^8.0.0-beta",
     "backport": "^3.0.2",
