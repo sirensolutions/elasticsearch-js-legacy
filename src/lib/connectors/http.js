@@ -196,8 +196,8 @@ HttpConnector.prototype.request = function(params, cb) {
         response += d;
       } catch (error) {
         // When stringified response is too big, we will catch this moment
-        // and throw an error to make sure server is NOT crashed
-        this.emit('end', error);
+        // and destroy it to make sure server is NOT crashed
+        this.destroy(error);
       }
     });
 
