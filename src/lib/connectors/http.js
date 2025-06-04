@@ -192,7 +192,14 @@ HttpConnector.prototype.request = function(params, cb) {
 
     incoming.setEncoding('utf8');
     incoming.on('data', function(d) {
-      response += d;
+      try {  
+        response += d;
+      } catch (error) {
+        // When stringified response is too big, we will catch this moment
+        // and destroy it to make sure server is NOT crashed
+        response = error.message
+        this.destroy(error);
+      }
     });
 
     incoming.on('error', cleanUp);
