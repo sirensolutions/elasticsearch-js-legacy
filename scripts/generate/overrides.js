@@ -274,7 +274,7 @@ function (spec) {
   {
     version: '<5.0.0',
     examples: {
-      scroll: 'scroll_<5.0.asciidoc',
+      scroll: 'scroll_lt5.0.asciidoc',
     },
   },
   {
